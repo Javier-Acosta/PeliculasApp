@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './pages/home/home.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { PeliculaComponent } from './pages/pelicula/pelicula.component';
 
 const routes :Routes=[
   {
@@ -12,7 +13,7 @@ const routes :Routes=[
 },
 {
   path:'pelicula/:id',
-  component:HomeComponent
+  component:PeliculaComponent
 },
 {
   path:'buscar/:texto',
@@ -28,10 +29,13 @@ const routes :Routes=[
 
 
 @NgModule({
-  declarations: [],
+  
   imports: [
     CommonModule,
-    routerm
+    RouterModule.forRoot(routes)
+  ],
+  exports:[
+    RouterModule
   ]
 })
 export class AppRoutingModule { }

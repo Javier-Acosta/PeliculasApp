@@ -12,7 +12,7 @@ export class AppComponent {
     this.PeliculasService.getCartelera ()
     .subscribe (resp=>{
       console.log(resp);
-      resp.results[0].id.toExponential
+      // resp.results[0].id.toExponential
       
     })
   }}
